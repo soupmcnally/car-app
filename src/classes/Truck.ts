@@ -4,9 +4,15 @@ import Motorbike from './Motorbike.js';
 import Car from './Car.js';
 import Wheel from './Wheel.js';
 import AbleToTow from '../interfaces/AbleToTow.js';
+import inquirer from "inquirer";
 
 // TODO: The Truck class should extend the Vehicle class and should implement the AbleToTow interface
 class Truck extends Vehicle implements AbleToTow {
+  
+ 
+  
+ 
+  
   // TODO: Declare properties of the Truck class
   // TODO: The properties should include vin, color, make, model, year, weight, top speed, wheels, and towing capacity
   // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[]), towingCapacity (number)
@@ -33,7 +39,7 @@ class Truck extends Vehicle implements AbleToTow {
     weight: number,
     topSpeed: number,
     wheels: Wheel[],
-    towingCapacity: number,
+    towingCapacity: number
   ) {
     super();
 
@@ -44,6 +50,7 @@ class Truck extends Vehicle implements AbleToTow {
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
+    this.towingCapacity = towingCapacity;
 
     if (wheels.length !== 4) {
       this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
@@ -51,7 +58,7 @@ class Truck extends Vehicle implements AbleToTow {
       this.wheels = wheels;
     }
 
-    this.towingCapacity = towingCapacity;
+    
   }
 
 
